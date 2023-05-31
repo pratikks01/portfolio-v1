@@ -7,9 +7,6 @@
 
 </p>
 
-<p align="center">
-  <a href="https://pratikshastrakar.netlify.app/"><img src="./img/project-preview/this-portfolio700px" alt="landing page"></a>
-</p>
 
 ## Table of Contents
 
@@ -40,7 +37,7 @@
 - Viridian Green - project skill text color
 - Slate Gray - mobile navbar background color
 
-<a href="https://coolors.co/ffffff-1d263b-f08cae-399e5a-0fa3b1-6b818c"><img alt="Color Palette Screenshot" src="./img/Readme/ColorPalette.png"></a>
+<!-- <a href="https://coolors.co/ffffff-1d263b-f08cae-399e5a-0fa3b1-6b818c"><img alt="Color Palette Screenshot" src="./img/Readme/ColorPalette.png"></a> -->
 
 
 ## Built With

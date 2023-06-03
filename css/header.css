@@ -14,14 +14,16 @@ header {
 	height: 70px;
 	padding: 0 15px;
 	z-index: 2;
+
 	background-color: #1d263b;
 }
 
 .header-logo {
 	padding: 10px;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	letter-spacing: 0.05em;
 	color: #fdca40;
+	font-weight: bold;
 }
 
 .nav-menu {
@@ -51,7 +53,7 @@ header {
 
 .nav-item a:hover,
 .nav-item a:focus {
-	color: #fdca40;
+	color: blue;
 	text-decoration: underline;
 }
 
@@ -96,7 +98,8 @@ header {
 	.nav-item a {
 		width: fit-content;
 		width: -moz-fit-content;
-		color: #ffffff;
+		/* color: #ffffff; */
+		color: #fdca40;
 	}
 	.toggle {
 		display: none;

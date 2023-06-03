@@ -21,7 +21,7 @@ header {
 	padding: 10px;
 	font-size: 1.2em;
 	letter-spacing: 0.05em;
-	color: pink;
+	color: #fdca40;
 }
 
 .nav-menu {
@@ -51,7 +51,7 @@ header {
 
 .nav-item a:hover,
 .nav-item a:focus {
-	color: #f08cae;
+	color: #fdca40;
 	text-decoration: underline;
 }
 

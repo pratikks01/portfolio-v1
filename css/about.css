@@ -105,6 +105,7 @@ h5 {
 
 #experience {
 	margin-top: 50px;
+	color: #fdca40;
 }
 
 .education-experience-card {
@@ -116,7 +117,7 @@ h5 {
 }
 
 .card-info p a:hover {
-	color: #f08cae;
+	color: #fdca40;
 }
 
 .card-description {
@@ -129,7 +130,7 @@ h5 {
 
 .card-description p::before {
 	content: ">\A0";
-	color: #7eb77f;
+	color: #fdca40;
 	font-weight: 700;
 }
 
@@ -147,6 +148,9 @@ h5 {
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+}
+#h3-color {
+	color: #fdca40;
 }
 
 .skill {
@@ -179,10 +183,12 @@ h5 {
 	text-align: center;
 	align-items: center;
 	padding: 5px 0;
+	color: #fdca40;
 }
 
 .social-media-item:hover {
-	color: #f08cae;
+	color: blue;
+	/* color: #fdca40; */
 }
 
 .social-media-item i {

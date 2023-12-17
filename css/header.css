@@ -33,7 +33,15 @@ header {
 	justify-content: space-evenly;
 	flex-direction: column;
 	align-items: center;
-	left: 0;
+	height: 0; /* Set height to 0 initially to hide content */
+	overflow: hidden; /* Hide overflow content */
+	width: 100%; /* Set width to 100% to span the entire viewport */
+	transition: height 0.3s ease; /* Transition on height for smooth animation */
+	left: 0; /* Start the menu from the leftmost edge of the screen */
+}
+
+.nav-menu.active {
+	height: auto; /* Set height to auto to reveal the content */
 }
 
 .nav-item {

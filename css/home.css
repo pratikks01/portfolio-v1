@@ -126,11 +126,10 @@ h3 a:hover {
 }
 
 .art-me {
-	display: none;
 	height: 225px;
-	border-radius: 50%; /* This makes the image circular */
+	margin-bottom: auto;
+	border-radius: 50%;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-	/* transform: rotate(15deg); */
 	transition: transform 0.3s ease;
 }
 
@@ -147,6 +146,7 @@ h3 a:hover {
 	}
 	.art-me {
 		display: block;
+		margin: 0 auto;
 	}
 	#home {
 		flex-direction: row;

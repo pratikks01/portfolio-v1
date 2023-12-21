@@ -1,3 +1,4 @@
+/* General Styling */
 h4,
 h5 {
 	font-weight: 700;
@@ -8,8 +9,7 @@ h5 {
 	font-style: italic;
 }
 
-/* --- PROFILE --- */
-
+/* Profile Section */
 .profile-container {
 	margin-top: 25px;
 	display: flex;
@@ -27,6 +27,14 @@ h5 {
 .me-icon {
 	height: 75%;
 	width: 75%;
+	border-radius: 50%;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease;
+}
+
+.me-icon img {
+	height: 100%;
+	border-radius: 50%;
 }
 
 .terminal-container {
@@ -97,8 +105,7 @@ h5 {
 	}
 }
 
-/* --- EDUCATION & EXPERIENCE --- */
-
+/* Education & Experience Section */
 .education-experience-container h3 {
 	margin-bottom: 50px;
 }
@@ -114,6 +121,7 @@ h5 {
 
 .card-info p {
 	margin-top: 0.35em;
+	margin-bottom: 0.35em; /* Added this line to adjust spacing after CGPA */
 }
 
 .card-info p a:hover {
@@ -138,8 +146,7 @@ h5 {
 	margin-top: 10px;
 }
 
-/* --- TECH STACK --- */
-
+/* Tech Stack Section */
 .tech-stack-container {
 	margin: 50px auto 0 auto;
 	max-width: 1000px;
@@ -149,6 +156,7 @@ h5 {
 	justify-content: center;
 	align-items: center;
 }
+
 #h3-color {
 	color: #fdca40;
 }
@@ -167,8 +175,7 @@ h5 {
 	margin-left: 10px;
 }
 
-/* --- ALL SOCIAL MEDIA --- */
-
+/* Social Media Section */
 .social-media-list {
 	margin: 50px auto 0 auto;
 	width: fit-content;
@@ -200,6 +207,62 @@ h5 {
 	margin-bottom: 10px;
 }
 
+.exp-window {
+	padding: 20px;
+	border-radius: 10px;
+	text-align: left;
+	border: 1px solid #7eb77f;
+	margin-bottom: 20px; /* Add margin-bottom to create space between blocks */
+}
+
+#experience-spacing {
+	margin-bottom: 20px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#edu-spacing {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#just-text {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#h3-border {
+	border-radius: 10px 10px 10px 10px;
+	border: 1px solid #7eb77f;
+}
+
+#hr-color {
+	border: 0.5px solid #7eb77f;
+}
+
+#h3-color {
+	color: #fdca40;
+	font-size: 19px;
+}
+
+#exp-heading {
+	color: #fdca40;
+}
+
+#experience-spacing,
+#just-text {
+	color: white;
+}
+
+.details {
+	display: none; /* Hide the details box by default */
+}
+
+.details.open {
+	display: block;
+}
+
+/* Media Queries */
 @media only screen and (min-width: 768px) {
 	#education-experience {
 		display: flex;
@@ -215,6 +278,18 @@ h5 {
 	.section-description {
 		margin: 50px 10% 0 10%;
 	}
+}
+
+.emoji-container {
+	position: relative;
+}
+
+.emoji {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 1cm;
+	font-size: 1.5em; /* Adjust the font size as needed */
 }
 
 @media only screen and (min-width: 1100px) {
@@ -241,7 +316,7 @@ h5 {
 		width: 40%;
 	}
 	.card-description {
-		width: 60%;
+		/* width: 60%; */
 		margin-top: 0;
 	}
 	.section-description {

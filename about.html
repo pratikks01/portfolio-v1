@@ -53,7 +53,7 @@
 					<li class="nav-item"><a href="./about.html">About</a></li>
 					<li class="nav-item"><a href="./projects.html">Projects</a></li>
 					<li class="nav-item">
-						<a href="https://www.behance.net/pratikks01">Photos</a>
+						<a href="https://instagram.com/pratikks01">Photos</a>
 					</li>
 					<li class="nav-item">
 						<a
@@ -78,7 +78,7 @@
 					<br />
 					And now working as a SRE at Morgan Stanley's Mumbai office where I
 					oversee critical finance applications, resolve user issues, automate
-					tasks and enhance system efficiency.
+					tasks, deploy apps and enhance system efficiency.
 					<br />
 					<br />I love photography and find ways to go out and capture photos,
 					especially of birds, places, and things in general.<br />
@@ -167,7 +167,7 @@
 							class="company-tile"
 							data-start-month="01"
 							data-start-year="2024"
-							onclick="toggleDetails('morganStanley')"
+							data-target="morganStanley"
 						>
 							<p>
 								<a
@@ -219,6 +219,8 @@
 									our systems and workflows.
 								</p>
 							</div>
+							<span class="arrow"><i class="fas fa-chevron-down"></i></span>
+							<!-- Font Awesome icon -->
 						</div>
 					</div>
 
@@ -229,14 +231,14 @@
 							data-start-year="2023"
 							data-end-month="11"
 							data-end-year="2023"
-							onclick="toggleDetails('wileyEdge')"
+							data-target="wileyEdge"
 						>
 							<p>
 								<a
 									id="h3-color"
 									href="https://www.wiley.com/edge/"
 									target="_blank"
-									>Wiley Edge</a
+									>Wiley Edge (now mthree)</a
 								>
 							</p>
 							<h4 class="green">Site Reliability Engineering Intern</h4>
@@ -271,6 +273,8 @@
 									SRE best practices.
 								</p>
 							</div>
+							<span class="arrow"><i class="fas fa-chevron-down"></i></span>
+							<!-- Arrow symbol -->
 						</div>
 					</div>
 
@@ -281,7 +285,7 @@
 							data-start-year="2023"
 							data-end-month="05"
 							data-end-year="2023"
-							onclick="toggleDetails('ltiMindtree')"
+							data-target="ltiMindtree"
 						>
 							<p>
 								<a
@@ -321,6 +325,8 @@
 									ensuring security and scalability.
 								</p>
 							</div>
+							<span class="arrow"><i class="fas fa-chevron-down"></i></span>
+							<!-- Arrow symbol -->
 						</div>
 					</div>
 					<div class="exp-window">
@@ -330,7 +336,7 @@
 							data-start-year="2022"
 							data-end-month="8"
 							data-end-year="2022"
-							onclick="toggleDetails('microsoftFuture')"
+							data-target="microsoftFuture"
 						>
 							<p>
 								<a id="h3-color" href="" target="_blank"
@@ -362,17 +368,17 @@
 									storage, ensuring secure resource access.
 								</p>
 							</div>
+							<span class="arrow"><i class="fas fa-chevron-down"></i></span>
+							<!-- Arrow symbol -->
 						</div>
 					</div>
 				</div>
+
 				<div id="education" class="education-experience-container">
 					<h3 id="exp-heading">🎓Education</h3>
 
 					<div class="exp-window">
-						<div
-							class="company-tile"
-							onclick="toggleDetails('engineeringCollege')"
-						>
+						<div class="company-tile" data-target="engineeringCollege">
 							<p>
 								<span id="h3-color">
 									Shri Ramdeobaba College of Engineering and Management, Nagpur
@@ -407,14 +413,13 @@
 								<p>Computer Networks</p>
 								<p>Optical, Wireless Communication</p>
 							</div>
+							<span class="arrow"><i class="fas fa-chevron-down"></i></span>
+							<!-- Arrow symbol -->
 						</div>
 					</div>
 
 					<div class="exp-window">
-						<div
-							class="company-tile"
-							onclick="toggleDetails('governmentPolytechnic')"
-						>
+						<div class="company-tile" data-target="governmentPolytechnic">
 							<p>
 								<span id="h3-color">Government Polytechnic, Nagpur</span>
 							</p>
@@ -441,6 +446,8 @@
 								<p>Computer Networks</p>
 								<p>Optical, Wireless Communication</p>
 							</div>
+							<span class="arrow"><i class="fas fa-chevron-down"></i></span>
+							<!-- Arrow symbol -->
 						</div>
 					</div>
 
@@ -600,11 +607,11 @@
 						Send me an Email
 					</a>
 					<a
-						href="https://www.behance.net/pratikks01"
+						href="https://instagram.com/pratikks01"
 						target="_blank"
 						class="social-media-item"
 					>
-						<i class="fa-brands fa-behance"> </i> Checkout my photos on Behance
+						<i class="fa-brands fa-behance"> </i> Checkout my photos
 					</a>
 				</div>
 			</section>
@@ -676,7 +683,11 @@
 				</div>
 
 				<div class="footer-column">
-					<a href="https://www.behance.net/pratikks01" class="footer-button">
+					<a
+						href="https://instagram.com/picbypratik"
+						class="footer-button"
+						target="_blank"
+					>
 						<img src="./img/camera.svg" alt="Camera Icon" />
 						Photos
 					</a>

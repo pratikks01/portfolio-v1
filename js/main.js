@@ -26,8 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (companyTile && targetId) {
 			companyTile.addEventListener("click", () => {
 				const details = expWindow.querySelector(`#${targetId}-details`);
+				const arrow = companyTile.querySelector(".arrow");
+
 				if (details) {
 					details.classList.toggle("open");
+
+					// Toggle the arrow visibility
+					if (details.classList.contains("open")) {
+						arrow.style.display = "none";
+					} else {
+						arrow.style.display = "inline";
+					}
 				}
 			});
 		}

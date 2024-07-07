@@ -323,3 +323,26 @@ h5 {
 		margin: 50px auto 0 auto;
 	}
 }
+
+/* ----------- */
+.company-tile {
+	position: relative;
+	cursor: pointer;
+	padding-right: 20px; /* Ensure there's space for the arrow */
+}
+
+.arrow {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 16px; /* Adjust the size as needed */
+}
+
+.details.closed + .arrow {
+	display: inline; /* Show the arrow when details are closed */
+}
+
+.details.open + .arrow {
+	display: none; /* Hide the arrow when details are open */
+}

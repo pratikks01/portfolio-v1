@@ -255,11 +255,13 @@ h5 {
 }
 
 .details {
-	display: none; /* Hide the details box by default */
+	max-height: 0; /* Initially hidden */
+	overflow: hidden; /* Hide overflow content */
+	transition: max-height 0.3s ease; /* Smooth transition */
 }
 
 .details.open {
-	display: block;
+	max-height: 1000px; /* Adjust as necessary for the content */
 }
 
 /* Media Queries */
@@ -345,4 +347,126 @@ h5 {
 
 .details.open + .arrow {
 	display: none; /* Hide the arrow when details are open */
+}
+
+/* Header Section */
+header {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1600px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+	height: 70px;
+	padding: 0 15px;
+	z-index: 2;
+	background-color: #1d263b;
+}
+
+.header-logo {
+	padding: 10px;
+	font-size: 1.4em;
+	letter-spacing: 0.05em;
+	color: #fdca40;
+	font-weight: bold;
+}
+
+.nav-menu {
+	list-style-type: none;
+	position: absolute;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+	height: 0; /* Set height to 0 initially to hide content */
+	overflow: hidden; /* Hide overflow content */
+	width: 100%; /* Set width to 100% to span the entire viewport */
+	transition: height 0.3s ease; /* Transition on height for smooth animation */
+	left: 0; /* Start the menu from the leftmost edge of the screen */
+}
+
+.nav-menu.active {
+	height: auto; /* Set height to auto to reveal the content */
+}
+
+.nav-item {
+	text-align: center;
+	display: none;
+}
+
+.nav-item a {
+	display: block;
+	padding: 20px;
+	font-weight: 700;
+	width: 100vw;
+	letter-spacing: 0.1em;
+	transition: all 0.2s ease;
+	color: #1d263b;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+	color: blue;
+	text-decoration: underline;
+}
+
+.active {
+	background-color: white;
+}
+
+.active .nav-item {
+	display: block;
+}
+
+.toggle {
+	padding: 1.1em;
+}
+
+.toggle i {
+	font-size: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+	.nav {
+		display: flex;
+		text-align: center;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-menu {
+		position: relative;
+		align-items: center;
+		flex-direction: row;
+		background-color: #1d263b;
+		height: fit-content;
+		height: -moz-fit-content;
+	}
+	.nav-item {
+		position: relative;
+		display: block;
+		width: fit-content;
+		width: -moz-fit-content;
+		margin: 0;
+	}
+	.nav-item a {
+		width: fit-content;
+		width: -moz-fit-content;
+		/* color: #ffffff; */
+		color: #fdca40;
+	}
+	.toggle {
+		display: none;
+	}
+}
+/* Adjustments for smooth transition */
+.details {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.3s ease; /* Transition on height for smooth animation */
+}
+
+.details.open {
+	height: auto; /* Set height to auto to reveal the content */
 }

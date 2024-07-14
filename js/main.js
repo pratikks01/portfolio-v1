@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (toggle && menu) {
 		toggle.addEventListener("click", () => {
 			menu.classList.toggle("active");
+
+			if (menu.classList.contains("active")) {
+				menu.style.height = `${menu.scrollHeight}px`;
+			} else {
+				menu.style.height = "0";
+			}
+
 			toggle.innerHTML = menu.classList.contains("active")
 				? `<i class="fas fa-times"></i>`
 				: `<i class="fas fa-bars"></i>`;
@@ -30,12 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				if (details) {
 					details.classList.toggle("open");
+					arrow.classList.toggle("open");
 
-					// Toggle the arrow visibility
 					if (details.classList.contains("open")) {
-						arrow.style.display = "none";
+						details.style.height = `${details.scrollHeight}px`;
 					} else {
-						arrow.style.display = "inline";
+						details.style.height = "0";
 					}
 				}
 			});

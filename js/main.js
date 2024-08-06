@@ -1,17 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-	// Load header and footer components
-	function loadComponent(url, elementId) {
-		fetch(url)
-			.then((response) => response.text())
-			.then((data) => {
-				document.getElementById(elementId).innerHTML = data;
-			})
-			.catch((error) => console.error("Error loading component:", error));
-	}
-
-	loadComponent("./header.html", "header-container");
-	loadComponent("./footer.html", "footer-container");
-
 	// Update the current year
 	const yearElement = document.getElementById("current-year");
 	if (yearElement) {

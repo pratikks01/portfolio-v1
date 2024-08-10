@@ -86,6 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Calculate total work experience with unemployment gap
 	const calculateTotalExperience = () => {
 		const bioElement = document.querySelector(".short-bio");
+		if (!bioElement) {
+			// The .short-bio element is not found, so we stop further execution of this function
+			console.error("Error: .short-bio element not found");
+			return;
+		}
+
 		const startMonth = bioElement.getAttribute("data-start-month");
 		const startYear = bioElement.getAttribute("data-start-year");
 		const experienceDurationElement = document.getElementById(

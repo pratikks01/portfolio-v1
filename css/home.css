@@ -1,5 +1,6 @@
 .main-container {
 	margin: -100px auto 0 auto;
+	padding: 0 15px;
 }
 
 /* --- LANDING PAGE --- */
@@ -43,7 +44,7 @@
 	margin: 0;
 	text-align: left;
 	font-weight: 700;
-	font-size: 2.75em;
+	font-size: 2em;
 	letter-spacing: 0;
 }
 

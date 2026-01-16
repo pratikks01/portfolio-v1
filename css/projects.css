@@ -5,18 +5,27 @@ em {
 .projects {
 	padding-top: 100px;
 	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
 }
 
 .project-cards-container {
 	margin-top: 50px;
 	height: fit-content;
 	height: -moz-fit-content;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	justify-content: center;
 }
 
 .card {
 	display: inline-flex;
 	flex-direction: column;
 	color: #1d263b;
+	width: 100%;
+	max-width: 400px;
 }
 
 .card:not(:last-child) {
@@ -101,8 +110,14 @@ em {
 }
 
 @media only screen and (min-width: 768px) {
-	.project-cards-container {
-		column-count: 2;
-		column-gap: 2em;
+	.card {
+		flex: 1 1 calc(50% - 1em);
+		max-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.card {
+		flex: 1 1 calc(50% - 1em);
 	}
 }

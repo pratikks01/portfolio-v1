@@ -12,10 +12,24 @@
 		</style>
 		<title>Pratik Shastrakar</title>
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<link rel="manifest" href="/site.webmanifest" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicons/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicons/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicons/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/favicons/site.webmanifest" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -48,29 +62,6 @@
 	</head>
 
 	<body>
-		<header class="header">
-			<a href="/" class="header-logo">@pratikshastrakar</a>
-			<nav class="nav">
-				<div class="toggle"><i class="fas fa-bars"></i></div>
-				<ul class="nav-menu">
-					<li class="nav-item"><a href="./about.html">About</a></li>
-					<li class="nav-item"><a href="./projects.html">Projects</a></li>
-					<li class="nav-item">
-						<a href="https://instagram.com/picbypratik" target="_blank"
-							>Photos</a
-						>
-					</li>
-					<li class="nav-item">
-						<a
-							href="https://drive.google.com/file/d/1PLHaR6uDRmem_EKe8ZmBNlyG1XI3SIaX/view?usp=sharing"
-							target="_blank"
-							>Resume</a
-						>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
 		<main class="main-container home-section">
 			<section id="home">
 				<div class="landing-page-details">
@@ -108,44 +99,7 @@
 					/>
 				</div>
 				<div class="landing-page-socials">
-					<ul>
-						<li class="social-link">
-							<a
-								href="https://www.linkedin.com/in/pratikshastrakar/"
-								aria-label="LinkedIn"
-								target="_blank"
-							>
-								<i class="fa-brands fa-linkedin-in"></i>
-							</a>
-						</li>
-						<li class="social-link">
-							<a
-								href="https://github.com/pratikks01"
-								aria-label="GitHub"
-								target="_blank"
-							>
-								<i class="fa-brands fa-github"></i>
-							</a>
-						</li>
-						<li class="social-link">
-							<a
-								href="https://twitter.com/pratikks01"
-								aria-label="X"
-								target="_blank"
-							>
-								<i class="fa-brands fa-twitter"></i>
-							</a>
-						</li>
-						<li class="social-link">
-							<a
-								href="https://instagram.com/pratikks01"
-								aria-label="Instagram"
-								target="_blank"
-							>
-								<i class="fa-brands fa-instagram"></i>
-							</a>
-						</li>
-					</ul>
+					<ul id="home-socials"></ul>
 				</div>
 			</section>
 			<section class="projects" id="select-projects">
@@ -155,141 +109,10 @@
 					You can find more on
 					<a class="hyperlink" href="https://github.com/pratikks01">GitHub</a>.
 				</p>
-				<div class="project-cards-container">
-					<div class="card">
-						<img
-							src="./img/project-preview/s3-event-thumbnail.png"
-							alt="Project Preview Screenshot"
-							class="card-preview-img"
-						/>
-						<div class="card-info">
-							<div class="title-and-links">
-								<span class="project-title"> AWS S3 Event Trigger </span>
-								<div class="project-links">
-									<a href="https://github.com/pratikks01/s3-event-trigger">
-										<i class="fa-brands fa-github"></i>
-									</a>
-								</div>
-							</div>
-							<div class="project-skills">
-								<span>AWS S3</span>
-								<span>AWS Lambda</span>
-								<span>AWS SNS</span>
-								<span>Shell Scripting</span>
-							</div>
-							<p class="project-description" id="just-text">
-								The recent project I completed is an AWS-based event-triggered
-								application. It automatically sends email notifications to users
-								when they upload files to an S3 bucket. The project utilizes AWS
-								Lambda (Python), Amazon S3, Amazon SNS, and the jq JSON
-								processor to streamline data. This setup efficiently handles
-								real-time notifications and ensures a seamless user experience.
-							</p>
-						</div>
-					</div>
-
-					<div class="card">
-						<img
-							src="./img/project-preview/OnlineGym.png"
-							alt="Project Preview Screenshot"
-							class="card-preview-img"
-						/>
-						<div class="card-info">
-							<div class="title-and-links">
-								<span class="project-title"> Online Gym Website </span>
-								<div class="project-links">
-									<a href="https://online-gym.netlify.app/">
-										<i class="fas fa-external-link-alt"></i>
-									</a>
-									<a href="https://github.com/pratikks01/fitness-app">
-										<i class="fa-brands fa-github"></i>
-									</a>
-								</div>
-							</div>
-							<div class="project-skills">
-								<span>React JS</span>
-								<span>MaterialUI</span>
-								<span>Netlify</span>
-								<span>ExerciseDB</span>
-								<span>Netlify</span>
-							</div>
-							<p class="project-description" id="just-text">
-								This website displays various exercises, highlighting the
-								muscles targeted by each exercise, and provides GIFs and video
-								tutorials for proper execution. The frontend was built using
-								React.js and Material UI. ExerciseDB and YouTube download APIs
-								were employed to fetch data from the RapidAPI cloud, and the
-								site is hosted on Netlify.
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<img
-							src="./img/project-preview/cicd-1.png"
-							alt="Project Preview Screenshot"
-							class="card-preview-img"
-						/>
-						<div class="card-info">
-							<div class="title-and-links">
-								<span class="project-title">
-									Jenkins Pipeline for Java-based Application
-								</span>
-								<div class="project-links">
-									<a href="https://github.com/pratikks01/cicd-argo-kubernetes">
-										<i class="fa-brands fa-github"></i>
-									</a>
-								</div>
-							</div>
-							<div class="project-skills">
-								<span>Maven</span>
-								<span>Jenkins</span>
-								<span>Sonarqube</span>
-								<span>Docker</span>
-								<span>ArgoCD</span>
-								<span>Kubernetes</span>
-							</div>
-							<p class="project-description" id="just-text">
-								This end-to-end Jenkins pipeline automates your Java
-								application's CI/CD journey, ensuring seamless deployment with
-								tools such as SonarQube, Argo CD, and Kubernetes. 🛠️
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<img
-							src="./img/project-preview/sudokuSolver.png"
-							alt="Project Preview Screenshot"
-							class="card-preview-img"
-						/>
-						<div class="card-info">
-							<div class="title-and-links">
-								<span class="project-title"> Suduko Solver</span>
-								<div class="project-links">
-									<!-- <a href="host url">
-										<i class="fas fa-external-link-alt"></i>
-									</a> -->
-									<a
-										href="https://github.com/pratikks01/SudukoSolverWeb/tree/main"
-									>
-										<i class="fa-brands fa-github"></i>
-									</a>
-								</div>
-							</div>
-							<div class="project-skills">
-								<span>HTML5</span>
-								<span>CSS3</span>
-								<span>JavaScript</span>
-							</div>
-							<p class="project-description" id="just-text">
-								Created a Sudoku solver in C++ using a backtracking algorithm to
-								fill cells with the correct entries. The solution was verified
-								using three criteria: Row, Column, and Grid. Additionally, I
-								developed a static webpage using HTML and CSS to showcase the
-								solution.
-							</p>
-						</div>
-					</div>
-				</div>
+				<div
+					class="project-cards-container"
+					id="select-projects-container"
+				></div>
 				<div class="cta-container">
 					<a href="/projects.html" class="cta">
 						<img src="./img/coding.svg" alt="Code Icon" />
@@ -299,105 +122,37 @@
 			</section>
 		</main>
 
-		<footer class="footer-container">
-			<div class="footer">
-				<div class="footer-column">
-					<a href="/" class="footer-logo">@pratikshastrakar</a>
-					<div class="socials">
-						<ul>
-							<li class="social-link">
-								<a
-									href="https://www.linkedin.com/in/pratikshastrakar/"
-									aria-label="LinkedIn"
-									target="_blank"
-								>
-									<i class="fa-brands fa-linkedin-in"></i>
-								</a>
-							</li>
-							<li class="social-link">
-								<a
-									href="https://github.com/pratikks01"
-									aria-label="GitHub"
-									target="_blank"
-								>
-									<i class="fa-brands fa-github"></i>
-								</a>
-							</li>
-							<li class="social-link">
-								<a
-									href="https://twitter.com/pratikks01"
-									aria-label="Twitter"
-									target="_blank"
-								>
-									<i class="fa-brands fa-twitter"></i>
-								</a>
-							</li>
-							<li class="social-link">
-								<a
-									href="https://instagram.com/pratikks01"
-									aria-label="Instagram"
-									target="_blank"
-								>
-									<i class="fa-brands fa-instagram"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<span class="copyright" id="copyright">
-						<i class="fa-regular fa-copyright"></i> Pratik Shastrakar
-						<span id="current-year"></span>
-					</span>
-				</div>
-
-				<div class="footer-column">
-					<a href="/about.html" class="footer-button">
-						<img src="./img/smile.svg" alt="Smile Icon" />
-						About
-					</a>
-					<a href="/projects.html" class="footer-button">
-						<img src="./img/coding.svg" alt="Code Icon" />
-						Projects
-					</a>
-					<a
-						href="https://drive.google.com/file/d/1PLHaR6uDRmem_EKe8ZmBNlyG1XI3SIaX/view?usp=drive_link"
-						target="_blank"
-						class="footer-button"
-					>
-						<img src="./img/resume.svg" alt="Resume Icon" />
-						Resume
-					</a>
-				</div>
-				<!-- <div class="footer-column">
-                    <a href="blog url"
-                        class="footer-button">
-                        <img src="./img/blog.svg" alt="Blog Icon">
-                        Thoughts
-                    </a>
-                    <a href="/pratik-resume.pdf" class="footer-button">
-                        <img src="./img/resume.svg" alt="Resume Icon">
-                        Resume
-                    </a>
-                    <a href="mailto:pshastrakar4@gmail.com" class="footer-button">
-                        <img src="./img/email.svg" alt="Email Icon">
-                        Contact
-                    </a>
-                </div> -->
-				<div class="footer-column">
-					<a
-						href="https://www.instagram.com/picbypratik/"
-						class="footer-button"
-					>
-						<img src="./img/camera.svg" alt="Camera Icon" />
-						Photos
-					</a>
-					<a href="mailto:pshastrakar4@gmail.com" class="footer-button">
-						<img src="./img/email.svg" alt="Email Icon" />
-						Contact
-					</a>
-				</div>
-			</div>
-		</footer>
-
+		<script src="./js/templates.js"></script>
+		<script src="./js/components.js"></script>
 		<script src="./js/main.js"></script>
+		<script>
+			fetch("./data.json")
+				.then((res) => res.json())
+				.then((data) => {
+					// Inject header and footer
+					injectHeader(data.profile, data.socials);
+					injectFooter(data.profile, data.socials);
+
+					// Setup menu toggle AFTER header is injected
+					setupMenuToggle();
+
+					// Render home page social links
+					const homeSocials = document.getElementById("home-socials");
+					homeSocials.innerHTML = data.socials
+						.slice(0, 4)
+						.map((social) => createSocialLink(social))
+						.join("");
+
+					// Render select projects (only those marked for homepage)
+					const projectsContainer = document.getElementById(
+						"select-projects-container"
+					);
+					projectsContainer.innerHTML = data.projects
+						.filter((project) => project.showOnHome)
+						.map(createProjectCard)
+						.join("");
+				})
+				.catch((err) => console.error("Error loading data:", err));
+		</script>
 	</body>
 </html>

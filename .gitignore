@@ -18,3 +18,5 @@
 .env
 .env.test
 .env.production
+
+REFACTORING_GUIDE.md

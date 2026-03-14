@@ -1,0 +1,323 @@
+{
+	"profile": {
+		"name": "Pratik Shastrakar",
+		"title": "Associate @ Morgan Stanley",
+		"bio": "SRE with passion for DevOps and Cloud, based in Mumbai, India.",
+		"location": "Mumbai, Maharashtra, India",
+		"email": "pshastrakar4@gmail.com",
+		"resumeLink": "https://drive.google.com/file/d/1PLHaR6uDRmem_EKe8ZmBNlyG1XI3SIaX/view?usp=sharing",
+		"profileImage": "./assets/images/ps.png",
+		"workStartMonth": 8,
+		"workStartYear": 2023,
+		"gapMonths": 2
+	},
+	"socials": [
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/pratikshastrakar/",
+			"icon": "fa-linkedin-in",
+			"label": "Connect on LinkedIn"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/pratikks01",
+			"icon": "fa-github",
+			"label": "Check out my projects on GitHub"
+		},
+		{
+			"name": "Twitter",
+			"url": "https://twitter.com/pratikks01",
+			"icon": "fa-twitter",
+			"label": "Follow on X (Twitter)"
+		},
+		{
+			"name": "Instagram",
+			"url": "https://www.instagram.com/pratikks01/",
+			"icon": "fa-instagram",
+			"label": "Follow on Instagram"
+		},
+		{
+			"name": "Email",
+			"url": "mailto:pshastrakar4@gmail.com",
+			"icon": "fa-envelope",
+			"label": "Send me an Email"
+		},
+		{
+			"name": "Photography",
+			"url": "https://instagram.com/picbypratik",
+			"icon": "fa-camera",
+			"label": "Checkout my photos"
+		}
+	],
+	"projects": [
+		{
+			"id": "cicd-pipeline",
+			"title": "Jenkins Pipeline for Java-based Application",
+			"image": "./assets/images/projects/cicd-1.png",
+			"description": "This end-to-end Jenkins pipeline automates your Java application's CI/CD journey, ensuring seamless deployment using tools like SonarQube, Argo CD, and Kubernetes. 🛠️",
+			"skills": [
+				"Maven",
+				"Jenkins",
+				"SonarQube",
+				"Docker",
+				"ArgoCD",
+				"Kubernetes"
+			],
+			"links": {
+				"github": "https://github.com/pratikks01/cicd-argo-kubernetes"
+			},
+			"showOnHome": true
+		},
+		{
+			"id": "s3-event-trigger",
+			"title": "AWS S3 Event Trigger",
+			"image": "./assets/images/projects/s3-event-thumbnail.png",
+			"description": "An AWS-based event-triggered application that automatically sends email notifications when files are uploaded to an S3 bucket. Utilizes AWS Lambda (Python), Amazon S3, Amazon SNS, and jq JSON processor for seamless real-time notifications.",
+			"skills": ["AWS S3", "AWS Lambda", "AWS SNS", "Shell Scripting"],
+			"links": {
+				"github": "https://github.com/pratikks01/s3-event-trigger"
+			},
+			"showOnHome": true
+		},
+		{
+			"id": "mern-chat-app",
+			"title": "MERN Chat App",
+			"image": "./assets/images/projects/ps-messengerHome.png",
+			"description": "A One-on-One chatting app made using MERN Stack with real-time chatting animations using Socket.io. Supports personal as well as group chatting.",
+			"skills": ["MERN Stack", "Socket.io"],
+			"links": {
+				"github": "https://github.com/pratikks01/ps-messenger"
+			},
+			"showOnHome": false
+		},
+		{
+			"id": "portfolio-v1",
+			"title": "Personal Portfolio Website",
+			"image": "./assets/images/projects/portfolio-v1.png",
+			"description": "A fully responsive multi-page website with elegant animations. Styled with React-Bootstrap and CSS for easy customization. Hosts resume and other projects.",
+			"skills": ["React JS", "Bootstrap", "Particle JS", "Netlify Hosting"],
+			"links": {
+				"demo": "https://pratikportfolio-v1.netlify.app/",
+				"github": "https://github.com/pratikks01/pratik-s-portfolio"
+			},
+			"showOnHome": false
+		},
+		{
+			"id": "online-gym",
+			"title": "Online Gym Website",
+			"image": "./assets/images/projects/OnlineGym.png",
+			"description": "A website that displays various exercises with targeted muscles, GIFs, and video tutorials for proper execution. Built with React.js and Material UI, using ExerciseDB and YouTube APIs.",
+			"skills": [
+				"React JS",
+				"MaterialUI",
+				"ExerciseDB API",
+				"YouTube API",
+				"Netlify"
+			],
+			"links": {
+				"demo": "https://online-gym.netlify.app/",
+				"github": "https://github.com/pratikks01/fitness-app"
+			},
+			"showOnHome": false
+		},
+		{
+			"id": "sudoku-solver",
+			"title": "Sudoku Solver",
+			"image": "./assets/images/projects/sudokuSolver.png",
+			"description": "A Sudoku solver implemented in C++ using a backtracking algorithm to fill cells with correct entries. Verified using Row, Column, and Grid criteria. Frontend created with HTML and CSS.",
+			"skills": ["HTML5", "CSS3", "JavaScript"],
+			"links": {
+				"github": "https://github.com/pratikks01/SudukoSolverWeb/tree/main"
+			},
+			"showOnHome": false
+		}
+	],
+	"experience": [
+		{
+			"id": "morgan-stanley",
+			"company": "Morgan Stanley",
+			"companyUrl": "https://www.morganstanley.com/",
+			"position": "Associate - Site Reliability Engineering",
+			"location": "Mumbai, Maharashtra, India",
+			"locationType": "Mumbai",
+			"startMonth": 1,
+			"startYear": 2024,
+			"endMonth": null,
+			"endYear": null,
+			"details": [
+				"Engineered automated release workflows and reliability frameworks for Tier-1 PnL Reporting applications, Worked as a FTC (via Wiley/Mthree) for 2 years, then got converted to FTE.",
+				"Scaled infrastructure using Infrastructure as Code (IaC) and GitOps principles, enabling faster environment provisioning and consistent configuration management.",
+				"Implemented end-to-end CI/CD pipelines with integrated security scanning and automated unit testing, reducing deployment failures and improving lead time for changes.",
+				"Designed self-service observability dashboards (Grafana, Splunk), empowering developers with real-time insights and reducing Mean Time to Resolution (MTTR) by 2 hours.",
+				"Automated complex operational tasks and data pipelines using Python and Shell, eliminating manual toil and increasing team productivity by 40%.",
+				"Facilitated collaboration between Dev and Ops teams to drive incident post-mortems and proactive capacity planning for peak financial reporting periods. (Quarter end and Year end earning release cycles.)"
+			]
+		},
+		{
+			"id": "wiley-edge",
+			"company": "Wiley Edge (now mthree)",
+			"companyUrl": "https://www.wiley.com/edge/",
+			"position": "Site Reliability Engineering Intern",
+			"location": "Remote",
+			"locationType": "remote",
+			"startMonth": 8,
+			"startYear": 2023,
+			"endMonth": 11,
+			"endYear": 2023,
+			"details": [
+				"Automated Linux system administration tasks using Shell scripting & Cron jobs, reducing manual effort by 60%.",
+				"Designed and deployed Dockerized applications, integrating CI/CD pipelines with Jenkins, cutting deployment failures by 30%.",
+				"Monitored and optimized system performance with Prometheus & Grafana, enhancing infrastructure visibility."
+			]
+		},
+		{
+			"id": "lti-mindtree",
+			"company": "LTIMindtree Ltd.",
+			"companyUrl": "https://www.ltimindtree.com/",
+			"position": "Intern",
+			"location": "Remote",
+			"locationType": "remote",
+			"startMonth": 2,
+			"startYear": 2023,
+			"endMonth": 5,
+			"endYear": 2023,
+			"details": [
+				"Developed a solid understanding of .NET framework and its applications in creating scalable and efficient software solutions.",
+				"Developed infrastructure as code using Terraform, automating cloud deployments.",
+				"Integrated Jenkins with Kubernetes for seamless CI/CD pipeline automation.",
+				"Orchestrated containerized applications on Kubernetes, ensuring security and scalability."
+			]
+		},
+		{
+			"id": "microsoft-future",
+			"company": "Microsoft Future Ready Talent",
+			"companyUrl": "",
+			"position": "Cloud Intern",
+			"location": "Remote",
+			"locationType": "remote",
+			"startMonth": 5,
+			"startYear": 2022,
+			"endMonth": 8,
+			"endYear": 2022,
+			"details": [
+				"Proficient in core Microsoft Azure fundamentals, adept at creating and managing resources.",
+				"Developed and hosted a prototype project on Azure Static Web Apps.",
+				"Implemented role-based access control (RBAC) for Azure Blob storage, ensuring secure resource access."
+			]
+		}
+	],
+	"education": [
+		{
+			"id": "engineering-college",
+			"institution": "Shri Ramdeobaba College of Engineering and Management, Nagpur",
+			"degree": "Bachelor's in Electronics Engineering",
+			"startDate": "Dec 2020",
+			"endDate": "June 2023",
+			"cgpa": "8.76/10",
+			"details": {
+				"achievements": [
+					"Entrix 2021 Winner - Presented and won the best paper award at Cardiff Metropolitan University UK.",
+					"Presented Final Year Project in PEIS 2023 at NIT Delhi, Paper published in Springer book series."
+				],
+				"coursework": [
+					"Data Structures & Algorithms",
+					"Computer Architecture & Organization",
+					"Database Management Systems",
+					"Object-Oriented Programming and Analysis",
+					"Computer Networks",
+					"Optical, Wireless Communication"
+				]
+			}
+		},
+		{
+			"id": "government-polytechnic",
+			"institution": "Government Polytechnic, Nagpur",
+			"degree": "Diploma in Electronics & Telecommunication Engineering",
+			"startDate": "Aug 2017",
+			"endDate": "Nov 2020",
+			"cgpa": "8.66/10",
+			"details": {
+				"achievements": [
+					"Entrix 2021 - Winner: Presented paper at Cardiff Metropolitan University UK, Won the Best Paper Award among 10 colleges globally"
+				],
+				"coursework": [
+					"Electronics Engineering",
+					"Power Electronics",
+					"Computer Networks",
+					"Optical, Wireless Communication"
+				]
+			}
+		},
+		{
+			"id": "senior-secondary",
+			"institution": "Sri Guru Harkrishan Public School, Nagpur",
+			"degree": "Senior Secondary Education",
+			"startDate": "May 2016",
+			"endDate": "June 2017",
+			"cgpa": "9.2/10",
+			"details": {}
+		}
+	],
+	"skills": [
+		{
+			"name": "C++",
+			"icon": "./assets/images/icons/cpp.svg"
+		},
+		{
+			"name": "Python",
+			"icon": "./assets/images/icons/python.svg"
+		},
+		{
+			"name": "Git",
+			"icon": "./assets/images/icons/git.svg"
+		},
+		{
+			"name": "Terraform",
+			"icon": "./assets/images/icons/terraform.svg"
+		},
+		{
+			"name": "Jenkins",
+			"icon": "./assets/images/icons/jenkins.svg"
+		},
+		{
+			"name": "Docker CI/CD",
+			"icon": "./assets/images/icons/docker.svg"
+		},
+		{
+			"name": "Kubernetes",
+			"icon": "./assets/images/icons/kubernetes.svg"
+		},
+		{
+			"name": "GitHub",
+			"icon": "./assets/images/icons/github.svg"
+		},
+		{
+			"name": "AWS",
+			"icon": "./assets/images/icons/aws.svg"
+		},
+		{
+			"name": "Azure",
+			"icon": "./assets/images/icons/azure.svg"
+		},
+		{
+			"name": "Prometheus",
+			"icon": "./assets/images/icons/prometheus.svg"
+		},
+		{
+			"name": "Grafana",
+			"icon": "./assets/images/icons/grafana.svg"
+		},
+		{
+			"name": "Splunk",
+			"icon": "./assets/images/icons/splunk.svg"
+		},
+		{
+			"name": "Linux",
+			"icon": "./assets/images/icons/linux.svg"
+		},
+		{
+			"name": "Windows",
+			"icon": "./assets/images/icons/windows.svg"
+		}
+	]
+}

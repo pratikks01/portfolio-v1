@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8" />
 		<style>
-			#just-text {
+			.just-text {
 				text-align: justify;
 				text-justify: inter-word;
 			}
-			#h3-color {
-				color: #fdca40;
+			.h3-color {
+				color: var(--color-primary, #fdca40);
 			}
 		</style>
 		<title>Pratik Shastrakar</title>
@@ -15,21 +16,21 @@
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="/favicons/apple-touch-icon.png"
+			href="/assets/favicons/apple-touch-icon.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="/favicons/favicon-32x32.png"
+			href="/assets/favicons/favicon-32x32.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/favicons/favicon-16x16.png"
+			href="/assets/favicons/favicon-16x16.png"
 		/>
-		<link rel="manifest" href="/favicons/site.webmanifest" />
+		<link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -38,14 +39,18 @@
 			name="keywords"
 			content="Pratik Shastrakar, Pratik Shastrakar Portfolio, Pratik Shastrakar Photography, photographer, developer, java, python, html, css, javascript, web developer, webdev, portfolio, devops, cloud, aws, azure, student, rcoem, nagpur, engineer"
 		/>
-		<meta name="robots" content="noindex, nofollow" />
+		<meta name="robots" content="index, follow" />
+		<meta
+			name="description"
+			content="Pratik Shastrakar — SRE/DevOps Engineer at Morgan Stanley. Cloud & DevOps enthusiast based in Mumbai, India."
+		/>
 
 		<link rel="canonical" href="https://pratikshastrakar.netlify.app/" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css?family=Nunito"
+			href="https://fonts.googleapis.com/css2?family=Nunito&family=Fira+Code&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -54,11 +59,11 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 		/>
 
-		<link rel="stylesheet" href="./css/main.css" type="text/css" />
-		<link rel="stylesheet" href="./css/header.css" type="text/css" />
-		<link rel="stylesheet" href="./css/home.css" type="text/css" />
-		<link rel="stylesheet" href="./css/projects.css" type="text/css" />
-		<link rel="stylesheet" href="./css/footer.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/header.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/home.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/projects.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/footer.css" type="text/css" />
 	</head>
 
 	<body>
@@ -67,13 +72,13 @@
 				<div class="landing-page-details">
 					<h1 class="small-title">Hi,</h1>
 					<h2 class="big-title">
-						I'm <span class="my-name pink">Pratik Shastrakar</span>
+						I'm <span class="my-name accent">Pratik Shastrakar</span>
 					</h2>
 
 					<h3 class="medium-title">
 						<em
 							>Technology Associate @
-							<a class="pink" href="https://www.morganstanley.com/"
+							<a class="accent" href="https://www.morganstanley.com/"
 								>Morgan Stanley</a
 							></em
 						>
@@ -94,7 +99,7 @@
 				</div>
 				<div class="art-me">
 					<img
-						src="./img/ps.png"
+						src="./assets/images/ps.png"
 						alt="Icon of me. Art credits to my dear friend Shantanu Amle"
 					/>
 				</div>
@@ -103,7 +108,7 @@
 				</div>
 			</section>
 			<section class="projects" id="select-projects">
-				<h2 id="h3-color">Select Projects</h2>
+				<h2 class="h3-color">Select Projects</h2>
 				<p class="section-description">
 					Here are some of my personal projects I have worked on.<br />
 					You can find more on
@@ -115,44 +120,37 @@
 				></div>
 				<div class="cta-container">
 					<a href="/projects.html" class="cta">
-						<img src="./img/coding.svg" alt="Code Icon" />
+						<img src="./assets/images/icons/coding.svg" alt="Code Icon" />
 						<span>Explore More</span>
 					</a>
 				</div>
 			</section>
 		</main>
 
-		<script src="./js/templates.js"></script>
-		<script src="./js/components.js"></script>
-		<script src="./js/main.js"></script>
+		<script src="./assets/js/templates.js"></script>
+		<script src="./assets/js/components.js"></script>
+		<script src="./assets/js/main.js"></script>
 		<script>
-			fetch("./data.json")
-				.then((res) => res.json())
-				.then((data) => {
-					// Inject header and footer
-					injectHeader(data.profile, data.socials);
-					injectFooter(data.profile, data.socials);
+			initPage((data) => {
+				// Render home page social links
+				const homeSocials = document.getElementById("home-socials");
+				homeSocials.innerHTML = data.socials
+					.slice(0, 4)
+					.map((social) => createSocialLink(social))
+					.join("");
 
-					// Setup menu toggle AFTER header is injected
-					setupMenuToggle();
+				// Render select projects (only those marked for homepage)
+				const projectsContainer = document.getElementById(
+					"select-projects-container",
+				);
+				projectsContainer.innerHTML = data.projects
+					.filter((project) => project.showOnHome)
+					.map(createProjectCard)
+					.join("");
 
-					// Render home page social links
-					const homeSocials = document.getElementById("home-socials");
-					homeSocials.innerHTML = data.socials
-						.slice(0, 4)
-						.map((social) => createSocialLink(social))
-						.join("");
-
-					// Render select projects (only those marked for homepage)
-					const projectsContainer = document.getElementById(
-						"select-projects-container",
-					);
-					projectsContainer.innerHTML = data.projects
-						.filter((project) => project.showOnHome)
-						.map(createProjectCard)
-						.join("");
-				})
-				.catch((err) => console.error("Error loading data:", err));
+				// Calculate total experience
+				calculateTotalExperience(data.profile.gapMonths || 0);
+			});
 		</script>
 	</body>
 </html>

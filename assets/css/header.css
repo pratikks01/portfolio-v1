@@ -1,0 +1,124 @@
+/* Header Section */
+a {
+	text-decoration: none;
+}
+
+/* Header Section */
+header {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1600px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+	height: 70px;
+	padding: 0 15px;
+	z-index: 2;
+	background-color: var(--color-bg);
+}
+
+.header-logo {
+	padding: 10px;
+	font-size: 1.4em;
+	letter-spacing: 0.05em;
+	color: var(--color-primary);
+	font-weight: bold;
+}
+
+/* Navigation Menu for Mobile */
+.nav-menu {
+	list-style-type: none;
+	position: absolute;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+	height: 0; /* Set height to 0 initially to hide content */
+	overflow: hidden; /* Hide overflow content */
+	width: 100%; /* Set width to 100% to span the entire viewport */
+	transition: height 0.3s ease; /* Transition on height for smooth animation */
+	left: 0; /* Start the menu from the leftmost edge of the screen */
+	background-color: var(--color-bg); /* Ensure background color */
+}
+
+.nav-menu.active {
+	height: auto; /* Set height to auto to reveal the content */
+}
+
+/* Navigation Items */
+.nav-item {
+	text-align: center;
+	display: none;
+}
+
+.nav-item a {
+	display: block;
+	padding: 20px;
+	font-weight: 700;
+	width: 100vw;
+	letter-spacing: 0.1em;
+	transition: all 0.2s ease;
+	color: var(--color-bg);
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+	color: var(--color-secondary);
+	text-decoration: underline;
+}
+
+.active {
+	background-color: var(--color-text);
+}
+
+.active .nav-item {
+	display: block;
+}
+
+/* Toggle Button (changed to <button> for accessibility) */
+.toggle {
+	padding: 1.1em;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	color: var(--color-primary);
+}
+
+.toggle i {
+	font-size: 2em;
+}
+
+/* Media Queries for Larger Screens */
+@media only screen and (min-width: 768px) {
+	.nav {
+		display: flex;
+		text-align: center;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-menu {
+		position: relative;
+		align-items: center;
+		flex-direction: row;
+		background-color: var(--color-bg);
+		height: fit-content;
+		height: -moz-fit-content;
+	}
+	.nav-item {
+		position: relative;
+		display: block;
+		width: fit-content;
+		width: -moz-fit-content;
+		margin: 0;
+	}
+	.nav-item a {
+		width: fit-content;
+		width: -moz-fit-content;
+		color: var(--color-primary);
+	}
+	.toggle {
+		display: none;
+	}
+}

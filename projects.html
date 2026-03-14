@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<style>
-			#just-text {
+			.just-text {
 				text-align: justify;
 				text-justify: inter-word;
 			}
@@ -13,21 +13,21 @@
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="/favicons/apple-touch-icon.png"
+			href="/assets/favicons/apple-touch-icon.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="/favicons/favicon-32x32.png"
+			href="/assets/favicons/favicon-32x32.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/favicons/favicon-16x16.png"
+			href="/assets/favicons/favicon-16x16.png"
 		/>
-		<link rel="manifest" href="/favicons/site.webmanifest" />
+		<link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
 		<meta property="og:title" content="Projects ~ Pratik Shastrakar" />
 		<meta property="og:type" content="website" />
@@ -51,7 +51,7 @@
 			name="keywords"
 			content="Pratik Shastrakar, Pratik Shastrakar Portfolio, Pratik Shastrakar Photography, photographer, developer, java, python, html, css, javascript, web developer, webdev, portfolio, devops, cloud, aws, azure, student, rcoem, nagpur, engineer"
 		/>
-		<meta name="robots" content="noindex, nofollow" />
+		<meta name="robots" content="index, follow" />
 		<link
 			rel="canonical"
 			href="https://pratikshastrakar.netlify.app/projects"
@@ -59,25 +59,25 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css?family=Nunito"
+			href="https://fonts.googleapis.com/css2?family=Nunito&family=Fira+Code&display=swap"
 			rel="stylesheet"
 		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./css/main.css" type="text/css" />
-		<link rel="stylesheet" href="./css/header.css" type="text/css" />
-		<link rel="stylesheet" href="./css/projects.css" type="text/css" />
-		<link rel="stylesheet" href="./css/footer.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/header.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/projects.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/footer.css" type="text/css" />
 	</head>
 
 	<body>
 		<main class="main-container project-section">
 			<section class="projects">
 				<div class="page-title">
-					<img src="./img/coding.svg" alt="Code Icon" />
-					<h2>pratik.<span class="pink">projects</span></h2>
+					<img src="./assets/images/icons/coding.svg" alt="Code Icon" />
+					<h2>pratik.<span class="accent">projects</span></h2>
 				</div>
 				<p class="section-description">
 					Here are some of my personals projects.<br />
@@ -89,25 +89,14 @@
 			</section>
 		</main>
 
-		<script src="./js/templates.js"></script>
-		<script src="./js/components.js"></script>
-		<script src="./js/main.js"></script>
+		<script src="./assets/js/templates.js"></script>
+		<script src="./assets/js/components.js"></script>
+		<script src="./assets/js/main.js"></script>
 		<script>
-			// Load and render projects from data.json
-			fetch("./data.json")
-				.then((res) => res.json())
-				.then((data) => {
-					// Inject header and footer
-					injectHeader(data.profile, data.socials);
-					injectFooter(data.profile, data.socials);
-
-					// Setup menu toggle AFTER header is injected
-					setupMenuToggle();
-
-					const container = document.querySelector(".project-cards-container");
-					container.innerHTML = data.projects.map(createProjectCard).join("");
-				})
-				.catch((err) => console.error("Error loading projects:", err));
+			initPage((data) => {
+				const container = document.querySelector(".project-cards-container");
+				container.innerHTML = data.projects.map(createProjectCard).join("");
+			});
 		</script>
 	</body>
 </html>

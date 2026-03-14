@@ -7,21 +7,21 @@
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="/favicons/apple-touch-icon.png"
+			href="/assets/favicons/apple-touch-icon.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="/favicons/favicon-32x32.png"
+			href="/assets/favicons/favicon-32x32.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/favicons/favicon-16x16.png"
+			href="/assets/favicons/favicon-16x16.png"
 		/>
-		<link rel="manifest" href="/favicons/site.webmanifest" />
+		<link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Pratik Shastrakar" />
@@ -34,16 +34,16 @@
 			property="og:description"
 			content="Hi! I'm Pratik. I am a self-taught web developer and a cloud enthusiast. I also enjoy photographing birds, places, and things."
 		/>
-		<meta property="og:image" content="URL_TO_YOUR_IMAGE" />
+		<meta property="og:image" content="https://pratikshastrakar.netlify.app/assets/images/ps.png" />
 
-		<meta name="robots" content="noindex, nofollow" />
+		<meta name="robots" content="index, follow" />
 
 		<link rel="canonical" href="https://pratikshastrakar.netlify.app/about" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css?family=Nunito"
+			href="https://fonts.googleapis.com/css2?family=Nunito&family=Fira+Code&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -52,18 +52,18 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 		/>
 
-		<link rel="stylesheet" href="./css/main.css" type="text/css" />
-		<link rel="stylesheet" href="./css/header.css" type="text/css" />
-		<link rel="stylesheet" href="./css/about.css" type="text/css" />
-		<link rel="stylesheet" href="./css/footer.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/header.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/about.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/footer.css" type="text/css" />
 	</head>
 
 	<body>
 		<main class="main-container about-section">
 			<section id="profile">
 				<div class="page-title">
-					<img src="./img/smile.svg" alt="Smile Icon" />
-					<h2>pratik.<span class="pink">profile</span></h2>
+					<img src="./assets/images/icons/smile.svg" alt="Smile Icon" />
+					<h2>pratik.<span class="accent">profile</span></h2>
 				</div>
 				<p class="section-description">
 					I have been working with computers and technology for most of my life
@@ -86,7 +86,7 @@
 					<div class="me-icon-container">
 						<img
 							class="me-icon"
-							src="./img/ps.png"
+							src="./assets/images/ps.png"
 							alt="Icon of myself."
 							title="Icon of me. Art credits to @shantanuamle"
 						/>
@@ -154,24 +154,24 @@
 
 			<section id="education-experience">
 				<div id="experience" class="education-experience-container">
-					<h3 id="exp-heading">💼 Work Experience</h3>
+					<h3 class="exp-heading">💼 Work Experience</h3>
 					<div id="experience-container"></div>
 				</div>
 
 				<div id="education" class="education-experience-container">
-					<h3 id="exp-heading">🎓Education</h3>
+					<h3 class="exp-heading">🎓Education</h3>
 					<div id="education-container"></div>
 				</div>
 			</section>
 			<hr id="hr-color" />
 
 			<section id="tech-stack">
-				<h3 id="exp-heading">Tech Stack</h3>
+				<h3 class="exp-heading">Tech Stack</h3>
 				<div class="tech-stack-container" id="skills-container"></div>
 			</section>
 
 			<section id="all-social-media">
-				<h3 id="exp-heading">Where to Find Me</h3>
+				<h3 class="exp-heading">Where to Find Me</h3>
 				<p class="section-description">
 					Here are all the places you can find me on the internet.<br />
 					Feel free to send me a message.
@@ -180,51 +180,41 @@
 			</section>
 		</main>
 
-		<script src="./js/templates.js"></script>
-		<script src="./js/components.js"></script>
-		<script src="./js/main.js"></script>
+		<script src="./assets/js/templates.js"></script>
+		<script src="./assets/js/components.js"></script>
+		<script src="./assets/js/main.js"></script>
 		<script>
-			fetch("./data.json")
-				.then((res) => res.json())
-				.then((data) => {
-					// Inject header and footer
-					injectHeader(data.profile, data.socials);
-					injectFooter(data.profile, data.socials);
+			initPage((data) => {
+				// Render experience
+				const expContainer = document.getElementById("experience-container");
+				expContainer.innerHTML = data.experience
+					.map((exp) => createExperienceCard(exp))
+					.join("");
 
-					// Setup menu toggle AFTER header is injected
-					setupMenuToggle();
+				// Render education
+				const eduContainer = document.getElementById("education-container");
+				eduContainer.innerHTML = data.education
+					.map((edu) => createEducationCard(edu))
+					.join("");
 
-					// Render experience
-					const expContainer = document.getElementById("experience-container");
-					expContainer.innerHTML = data.experience
-						.map((exp) => createExperienceCard(exp))
-						.join("");
+				// Render skills
+				const skillsContainer = document.getElementById("skills-container");
+				skillsContainer.innerHTML = data.skills
+					.map((skill) => createSkillBadge(skill))
+					.join("");
 
-					// Render education
-					const eduContainer = document.getElementById("education-container");
-					eduContainer.innerHTML = data.education
-						.map((edu) => createEducationCard(edu))
-						.join("");
+				// Render social media
+				const socialContainer = document.getElementById(
+					"social-media-container",
+				);
+				socialContainer.innerHTML = data.socials
+					.map((social) => createSocialMediaListItem(social))
+					.join("");
 
-					// Render skills
-					const skillsContainer = document.getElementById("skills-container");
-					skillsContainer.innerHTML = data.skills
-						.map((skill) => createSkillBadge(skill))
-						.join("");
-
-					// Render social media
-					const socialContainer = document.getElementById(
-						"social-media-container",
-					);
-					socialContainer.innerHTML = data.socials
-						.map((social) => createSocialMediaListItem(social))
-						.join("");
-
-					// Setup toggle functionality
-					setupDetailsToggle();
-					updateDurations();
-				})
-				.catch((err) => console.error("Error loading data:", err));
+				// Setup toggle functionality
+				setupDetailsToggle();
+				updateDurations();
+			});
 		</script>
 	</body>
 </html>

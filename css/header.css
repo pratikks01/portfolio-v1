@@ -1,4 +1,13 @@
 /* General Styles */
+/* General Styles */
+:root {
+	--color-bg: #1d263b;
+	--color-text: #ffffff;
+	--color-primary: #fdca40;
+	--color-secondary: #7eb77f;
+	--color-link-hover: blue; /* Consider defining this as a variable too */
+}
+
 a {
 	text-decoration: none;
 }
@@ -16,14 +25,14 @@ header {
 	height: 70px;
 	padding: 0 15px;
 	z-index: 2;
-	background-color: #1d263b;
+	background-color: var(--color-bg);
 }
 
 .header-logo {
 	padding: 10px;
 	font-size: 1.4em;
 	letter-spacing: 0.05em;
-	color: #fdca40;
+	color: var(--color-primary);
 	font-weight: bold;
 }
 
@@ -40,7 +49,7 @@ header {
 	width: 100%; /* Set width to 100% to span the entire viewport */
 	transition: height 0.3s ease; /* Transition on height for smooth animation */
 	left: 0; /* Start the menu from the leftmost edge of the screen */
-	background-color: #1d263b; /* Ensure background color */
+	background-color: var(--color-bg); /* Ensure background color */
 }
 
 .nav-menu.active {
@@ -60,26 +69,30 @@ header {
 	width: 100vw;
 	letter-spacing: 0.1em;
 	transition: all 0.2s ease;
-	color: #1d263b;
+	color: var(--color-bg);
 }
 
 .nav-item a:hover,
 .nav-item a:focus {
-	color: blue;
+	color: var(--color-link-hover);
 	text-decoration: underline;
 }
 
 .active {
-	background-color: white;
+	background-color: var(--color-text);
 }
 
 .active .nav-item {
 	display: block;
 }
 
-/* Toggle Button */
+/* Toggle Button (changed to <button> for accessibility) */
 .toggle {
 	padding: 1.1em;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	color: var(--color-primary);
 }
 
 .toggle i {
@@ -98,7 +111,7 @@ header {
 		position: relative;
 		align-items: center;
 		flex-direction: row;
-		background-color: #1d263b;
+		background-color: var(--color-bg);
 		height: fit-content;
 		height: -moz-fit-content;
 	}
@@ -112,7 +125,7 @@ header {
 	.nav-item a {
 		width: fit-content;
 		width: -moz-fit-content;
-		color: #fdca40;
+		color: var(--color-primary);
 	}
 	.toggle {
 		display: none;

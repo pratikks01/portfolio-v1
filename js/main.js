@@ -17,6 +17,20 @@ const calculateDuration = (startMonth, startYear, endMonth, endYear) => {
 };
 
 /**
+ * Generic function to toggle collapsible elements.
+ * @param {HTMLElement} element - The element to toggle.
+ * @param {string} activeClass - The class to apply when open.
+ */
+const toggleCollapsible = (element, activeClass = "open") => {
+	element.classList.toggle(activeClass);
+	if (element.classList.contains(activeClass)) {
+		// Set height based on its content's scroll height
+		element.style.height = `${element.scrollHeight}px`;
+	} else {
+		element.style.height = "0";
+	}
+};
+/**
  * Setup toggle details functionality for experience/education cards
  */
 const setupDetailsToggle = () => {
@@ -30,15 +44,9 @@ const setupDetailsToggle = () => {
 				const arrow = companyTile.querySelector(".arrow");
 
 				if (details) {
-					details.classList.toggle("open");
+					toggleCollapsible(details); // Use the helper
 					if (arrow) {
 						arrow.classList.toggle("open");
-					}
-
-					if (details.classList.contains("open")) {
-						details.style.height = `${details.scrollHeight}px`;
-					} else {
-						details.style.height = "0";
 					}
 				}
 			});
@@ -62,7 +70,7 @@ const updateDurations = () => {
 				startMonth,
 				startYear,
 				endMonth,
-				endYear
+				endYear,
 			);
 		}
 	});
@@ -80,7 +88,7 @@ const calculateTotalExperience = () => {
 	const startMonth = bioElement.getAttribute("data-start-month");
 	const startYear = bioElement.getAttribute("data-start-year");
 	const experienceDurationElement = document.getElementById(
-		"experience-duration"
+		"experience-duration",
 	);
 
 	if (startMonth && startYear && experienceDurationElement) {
@@ -121,17 +129,12 @@ const setupMenuToggle = () => {
 
 	if (toggle && menu) {
 		toggle.addEventListener("click", () => {
-			menu.classList.toggle("active");
-
-			if (menu.classList.contains("active")) {
-				menu.style.height = `${menu.scrollHeight}px`;
-			} else {
-				menu.style.height = "0";
-			}
+			toggleCollapsible(menu, "active"); // Use the helper
 
 			toggle.innerHTML = menu.classList.contains("active")
-				? `<i class="fas fa-times"></i>`
-				: `<i class="fas fa-bars"></i>`;
+				? `<i class="fas fa-times" aria-hidden="true"></i>`
+				: `<i class="fas fa-bars" aria-hidden="true"></i>`;
+			// Also update the aria-label if we add one
 		});
 	}
 };

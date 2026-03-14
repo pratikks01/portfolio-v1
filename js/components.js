@@ -15,7 +15,9 @@ function createHeader(profile, socials) {
 				.toLowerCase()
 				.replace(" ", ".")}</a>
       <nav class="nav">
-        <div class="toggle"><i class="fas fa-bars"></i></div>
+        <button class="toggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
         <ul class="nav-menu">
           <li class="nav-item"><a href="./about.html">About</a></li>
           <li class="nav-item"><a href="./projects.html">Projects</a></li>
@@ -96,7 +98,7 @@ function injectHeader(profile, socials) {
 		tempDiv.innerHTML = createHeader(profile, socials);
 		document.body.insertBefore(
 			tempDiv.firstElementChild,
-			document.body.firstChild
+			document.body.firstChild,
 		);
 	}
 }

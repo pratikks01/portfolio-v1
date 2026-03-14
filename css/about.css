@@ -1,3 +1,8 @@
+/* It's a good practice to define CSS variables for colors and fonts for easier maintenance.
+   These should be in a global stylesheet, but for this example, I'm assuming they are available.
+   :root { --color-primary: #fdca40; --color-secondary: #7eb77f; --color-bg-dark: #1d263b; ... }
+*/
+
 /* General Styling */
 h4,
 h5 {
@@ -49,17 +54,17 @@ h5 {
 	text-align: center;
 	justify-content: space-between;
 	border-radius: 10px 10px 0 0;
-	background-color: #7eb77f;
+	background-color: var(--color-secondary, #7eb77f);
 }
 
 #terminal-title {
 	font-weight: 700;
-	color: #1d263b;
+	color: var(--color-bg, #1d263b);
 	letter-spacing: 0.1em;
 }
 
 .right-side-buttons i {
-	color: #1d263b;
+	color: var(--color-bg, #1d263b);
 }
 
 .right-side-buttons i:not(:last-child) {
@@ -70,7 +75,7 @@ h5 {
 	padding: 20px;
 	border-radius: 0 0 10px 10px;
 	text-align: left;
-	border: 1px solid #7eb77f;
+	border: 1px solid var(--color-secondary, #7eb77f);
 }
 
 .terminal-window div,
@@ -89,7 +94,7 @@ h5 {
 
 .input::before {
 	content: ">\A0";
-	color: #7eb77f;
+	color: var(--color-secondary, #7eb77f);
 	font-weight: 700;
 }
 
@@ -112,7 +117,7 @@ h5 {
 
 #experience {
 	margin-top: 50px;
-	color: #fdca40;
+	color: var(--color-primary, #fdca40);
 }
 
 .education-experience-card {
@@ -125,7 +130,7 @@ h5 {
 }
 
 .card-info p a:hover {
-	color: #fdca40;
+	color: var(--color-primary, #fdca40);
 }
 
 .card-description {
@@ -138,7 +143,7 @@ h5 {
 
 .card-description p::before {
 	content: ">\A0";
-	color: #fdca40;
+	color: var(--color-primary, #fdca40);
 	font-weight: 700;
 }
 
@@ -157,14 +162,14 @@ h5 {
 	align-items: center;
 }
 
-#h3-color {
-	color: #fdca40;
+.text-primary {
+	color: var(--color-primary, #fdca40);
 }
 
 .skill {
 	border-radius: 12px;
 	margin: 10px;
-	border: 2px solid #7eb77f;
+	border: 2px solid var(--color-secondary, #7eb77f);
 	padding: 8px 10px;
 	display: flex;
 	align-items: center;
@@ -190,12 +195,11 @@ h5 {
 	text-align: center;
 	align-items: center;
 	padding: 5px 0;
-	color: #fdca40;
+	color: var(--color-primary, #fdca40);
 }
 
 .social-media-item:hover {
-	color: blue;
-	/* color: #fdca40; */
+	color: var(--color-link-hover, blue);
 }
 
 .social-media-item i {
@@ -211,7 +215,7 @@ h5 {
 	padding: 20px;
 	border-radius: 10px;
 	text-align: left;
-	border: 1px solid #7eb77f;
+	border: 1px solid var(--color-secondary, #7eb77f);
 	margin-bottom: 20px; /* Add margin-bottom to create space between blocks */
 }
 
@@ -231,22 +235,17 @@ h5 {
 	text-justify: inter-word;
 }
 
-#h3-border {
+.bordered-secondary {
 	border-radius: 10px 10px 10px 10px;
-	border: 1px solid #7eb77f;
+	border: 1px solid var(--color-secondary, #7eb77f);
 }
 
-#hr-color {
-	border: 0.5px solid #7eb77f;
+.hr-secondary {
+	border: 0.5px solid var(--color-secondary, #7eb77f);
 }
 
-#h3-color {
-	color: #fdca40;
+.heading-sm {
 	font-size: 19px;
-}
-
-#exp-heading {
-	color: #fdca40;
 }
 
 #experience-spacing,
@@ -257,7 +256,7 @@ h5 {
 .details {
 	max-height: 0; /* Initially hidden */
 	overflow: hidden; /* Hide overflow content */
-	transition: max-height 0.3s ease; /* Smooth transition */
+	transition: max-height 0.5s ease-in-out; /* Smooth transition */
 }
 
 .details.open {
@@ -347,126 +346,4 @@ h5 {
 
 .details.open + .arrow {
 	display: none; /* Hide the arrow when details are open */
-}
-
-/* Header Section */
-header {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1600px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	text-align: center;
-	align-items: center;
-	height: 70px;
-	padding: 0 15px;
-	z-index: 2;
-	background-color: #1d263b;
-}
-
-.header-logo {
-	padding: 10px;
-	font-size: 1.4em;
-	letter-spacing: 0.05em;
-	color: #fdca40;
-	font-weight: bold;
-}
-
-.nav-menu {
-	list-style-type: none;
-	position: absolute;
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: column;
-	align-items: center;
-	height: 0; /* Set height to 0 initially to hide content */
-	overflow: hidden; /* Hide overflow content */
-	width: 100%; /* Set width to 100% to span the entire viewport */
-	transition: height 0.3s ease; /* Transition on height for smooth animation */
-	left: 0; /* Start the menu from the leftmost edge of the screen */
-}
-
-.nav-menu.active {
-	height: auto; /* Set height to auto to reveal the content */
-}
-
-.nav-item {
-	text-align: center;
-	display: none;
-}
-
-.nav-item a {
-	display: block;
-	padding: 20px;
-	font-weight: 700;
-	width: 100vw;
-	letter-spacing: 0.1em;
-	transition: all 0.2s ease;
-	color: #1d263b;
-}
-
-.nav-item a:hover,
-.nav-item a:focus {
-	color: blue;
-	text-decoration: underline;
-}
-
-.active {
-	background-color: white;
-}
-
-.active .nav-item {
-	display: block;
-}
-
-.toggle {
-	padding: 1.1em;
-}
-
-.toggle i {
-	font-size: 2em;
-}
-
-@media only screen and (min-width: 768px) {
-	.nav {
-		display: flex;
-		text-align: center;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.nav-menu {
-		position: relative;
-		align-items: center;
-		flex-direction: row;
-		background-color: #1d263b;
-		height: fit-content;
-		height: -moz-fit-content;
-	}
-	.nav-item {
-		position: relative;
-		display: block;
-		width: fit-content;
-		width: -moz-fit-content;
-		margin: 0;
-	}
-	.nav-item a {
-		width: fit-content;
-		width: -moz-fit-content;
-		/* color: #ffffff; */
-		color: #fdca40;
-	}
-	.toggle {
-		display: none;
-	}
-}
-/* Adjustments for smooth transition */
-.details {
-	height: 0;
-	overflow: hidden;
-	transition: height 0.3s ease; /* Transition on height for smooth animation */
-}
-
-.details.open {
-	height: auto; /* Set height to auto to reveal the content */
 }

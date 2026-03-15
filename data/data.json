@@ -5,7 +5,7 @@
 		"bio": "SRE with passion for DevOps and Cloud, based in Mumbai, India.",
 		"location": "Mumbai, Maharashtra, India",
 		"email": "pshastrakar4@gmail.com",
-		"resumeLink": "https://drive.google.com/file/d/1PLHaR6uDRmem_EKe8ZmBNlyG1XI3SIaX/view?usp=sharing",
+		"resumeLink": "./resume.html",
 		"profileImage": "./assets/images/ps.png",
 		"workStartMonth": 8,
 		"workStartYear": 2023,
@@ -15,41 +15,61 @@
 		{
 			"name": "LinkedIn",
 			"url": "https://www.linkedin.com/in/pratikshastrakar/",
-			"icon": "fa-linkedin-in",
+			"icon": "fa-brands fa-linkedin-in",
 			"label": "Connect on LinkedIn"
 		},
 		{
 			"name": "GitHub",
 			"url": "https://github.com/pratikks01",
-			"icon": "fa-github",
+			"icon": "fa-brands fa-github",
 			"label": "Check out my projects on GitHub"
 		},
 		{
 			"name": "Twitter",
-			"url": "https://twitter.com/pratikks01",
-			"icon": "fa-twitter",
+			"url": "https://x.com/pratikks01",
+			"icon": "fa-brands fa-x-twitter",
 			"label": "Follow on X (Twitter)"
 		},
 		{
 			"name": "Instagram",
 			"url": "https://www.instagram.com/pratikks01/",
-			"icon": "fa-instagram",
+			"icon": "fa-brands fa-instagram",
 			"label": "Follow on Instagram"
 		},
 		{
 			"name": "Email",
 			"url": "mailto:pshastrakar4@gmail.com",
-			"icon": "fa-envelope",
+			"icon": "fa-solid fa-envelope",
 			"label": "Send me an Email"
 		},
 		{
 			"name": "Photography",
 			"url": "https://instagram.com/picbypratik",
-			"icon": "fa-camera",
+			"icon": "fa-solid fa-camera",
 			"label": "Checkout my photos"
 		}
 	],
 	"projects": [
+{
+			"id": "EKS-pipeline",
+			"title": "Automated Deployment & Full-Stack Observability",
+			"image": "./assets/images/projects/EKS_Proj.jpeg",
+			"description": "Designed and deployed a containerized multi-service application on AWS EKS using Terraform and ArgoCD (GitOps). Built a complete observability pipeline utilizing OpenTelemetry to aggregate telemetry data, Grafana dashboards for SLI/SLO tracking, and Jaeger for distributed tracing and rapid root-cause analysis.",
+			"skills": [
+				"AWS EKS",
+				"Docker",
+				"Terraform",
+				"ArgoCD",
+				"Kubernetes",
+				"OpenTelemetry",
+				"Grafana"
+			],
+			"links": {
+				"github": "https://github.com/pratikks01/microservice-devops-demo"
+			},
+			"showOnHome": true
+		},
+
 		{
 			"id": "cicd-pipeline",
 			"title": "Jenkins Pipeline for Java-based Application",
@@ -77,7 +97,7 @@
 			"links": {
 				"github": "https://github.com/pratikks01/s3-event-trigger"
 			},
-			"showOnHome": true
+			"showOnHome": false
 		},
 		{
 			"id": "mern-chat-app",
@@ -131,6 +151,7 @@
 			},
 			"showOnHome": false
 		}
+		
 	],
 	"experience": [
 		{
@@ -145,7 +166,7 @@
 			"endMonth": null,
 			"endYear": null,
 			"details": [
-				"Engineered automated release workflows and reliability frameworks for Tier-1 PnL Reporting applications, Worked as a FTC (via Wiley/Mthree) for 2 years, then got converted to FTE.",
+				"Engineered automated release workflows and reliability frameworks for Tier-1 PnL Reporting applications.",
 				"Scaled infrastructure using Infrastructure as Code (IaC) and GitOps principles, enabling faster environment provisioning and consistent configuration management.",
 				"Implemented end-to-end CI/CD pipelines with integrated security scanning and automated unit testing, reducing deployment failures and improving lead time for changes.",
 				"Designed self-service observability dashboards (Grafana, Splunk), empowering developers with real-time insights and reducing Mean Time to Resolution (MTTR) by 2 hours.",
@@ -268,19 +289,23 @@
 			"icon": "./assets/images/icons/python.svg"
 		},
 		{
+			"name": "JavaScript",
+			"icon": "./assets/images/icons/javascript.svg"
+		},
+		{
+			"name": "React",
+			"icon": "./assets/images/icons/react.svg"
+		},
+		{
 			"name": "Git",
 			"icon": "./assets/images/icons/git.svg"
 		},
 		{
-			"name": "Terraform",
-			"icon": "./assets/images/icons/terraform.svg"
+			"name": "GitHub",
+			"icon": "./assets/images/icons/github.svg"
 		},
 		{
-			"name": "Jenkins",
-			"icon": "./assets/images/icons/jenkins.svg"
-		},
-		{
-			"name": "Docker CI/CD",
+			"name": "Docker",
 			"icon": "./assets/images/icons/docker.svg"
 		},
 		{
@@ -288,8 +313,12 @@
 			"icon": "./assets/images/icons/kubernetes.svg"
 		},
 		{
-			"name": "GitHub",
-			"icon": "./assets/images/icons/github.svg"
+			"name": "Jenkins",
+			"icon": "./assets/images/icons/jenkins.svg"
+		},
+		{
+			"name": "Terraform",
+			"icon": "./assets/images/icons/terraform.svg"
 		},
 		{
 			"name": "AWS",
@@ -318,6 +347,10 @@
 		{
 			"name": "Windows",
 			"icon": "./assets/images/icons/windows.svg"
+		},
+		{
+			"name": "MacOS",
+			"icon": "./assets/images/icons/macos.svg"
 		}
 	]
 }

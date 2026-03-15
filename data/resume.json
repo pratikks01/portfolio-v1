@@ -1,0 +1,69 @@
+{
+  "personal": {
+    "name": "Pratik Shastrakar",
+    "phone": "+91 XXXXXX",
+    "email": "pshastrakar4@gmail.com",
+    "linkedIn": "linkedin.com/in/pratikshastrakar",
+    "linkedInUrl": "https://linkedin.com/in/pratikshastrakar",
+    "website": "pratikshastrakar.in",
+    "websiteUrl": "https://pratikshastrakar.in/",
+    "pdfLink": "https://drive.google.com/file/d/1PLHaR6uDRmem_EKe8ZmBNlyG1XI3SIaX/view?usp=sharing"
+  },
+  "summary": "<strong>DevOps & Site Reliability Engineer</strong> with 2+ years of experience streamlining software delivery and managing mission-critical financial infrastructure. Expert in building <strong>CI/CD pipelines</strong>, implementing <strong>Infrastructure as Code (Terraform)</strong>, and architecting observability stacks (Prometheus, Grafana). Proven track record in bridging the gap between development and operations to accelerate deployment cycles while maintaining 99.9% system availability.",
+  "experience": [
+    {
+      "company": "Morgan Stanley",
+      "location": "Mumbai, India",
+      "title": "Technology Associate",
+      "date": "Jan. 2024 -- Present",
+      "bullets": [
+        "Engineered automated release workflows and reliability frameworks for Tier-1 PnL Reporting applications.",
+        "Scaled infrastructure using <strong>Infrastructure as Code (IaC)</strong> and GitOps principles, enabling faster environment provisioning and consistent configuration management.",
+        "Implemented end-to-end <strong>CI/CD pipelines</strong> with integrated security scanning and automated unit testing, reducing deployment failures and improving lead time for changes.",
+        "Designed self-service observability dashboards (Grafana, Splunk), empowering developers with real-time insights and reducing Mean Time to Resolution (MTTR) by 2 hours.",
+        "Automated complex operational tasks and data pipelines using <strong>Python and Shell</strong>, eliminating manual toil and increasing team productivity by 40%.",
+        "Facilitated collaboration between Dev and Ops teams to drive incident post-mortems and proactive capacity planning for peak financial reporting periods."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "EKS Observability Platform",
+      "technologies": "AWS, Terraform, Kubernetes, ArgoCD, Grafana, Jaeger",
+      "bullets": [
+        "Engineered a cloud-native platform on AWS EKS using <strong>Terraform</strong>; implemented <strong>GitOps</strong> with <strong>ArgoCD</strong> for automated, declarative application deployment.",
+        "Deployed an OpenTelemetry Collector stack to centralize distributed traces and metrics, providing full-stack visibility into microservices."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Shri Ramdeobaba College of Engineering and Management",
+      "location": "Nagpur, India",
+      "degree": "Bachelor of Engineering in Electronics Engineering (CGPA 8.76)",
+      "date": "2020 -- June 2023"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": "Python, SQL, Groovy, Shell Scripting"
+    },
+    {
+      "category": "CI/CD & DevOps",
+      "items": "Jenkins, GitOps (ArgoCD), Terraform, Ansible, Docker, Kubernetes, Git"
+    },
+    {
+      "category": "Cloud & Platforms",
+      "items": "AWS, UNIX/Linux Systems, Financial Reporting Infrastructure"
+    },
+    {
+      "category": "Observability",
+      "items": "Prometheus, Grafana, Splunk, OpenTelemetry"
+    },
+    {
+      "category": "Certifications",
+      "items": "Microsoft AZ-900, AWS Cloud Practitioner, Cisco Networking"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ function createHeader(profile, socials) {
             <a href="https://instagram.com/picbypratik" target="_blank" rel="noopener noreferrer">Photos</a>
           </li>
           <li class="nav-item">
-            <a href="${profile.resumeLink}" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href="${profile.resumeLink}">Resume</a>
           </li>
         </ul>
       </nav>
@@ -44,7 +44,7 @@ function createSocialMediaListItem(social) {
     <a href="${social.url}" class="social-media-item" ${
 		social.url.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""
 	}>
-      <i class="fa-brands ${social.icon}"></i>
+      <i class="${social.icon}"></i>
       ${social.label}
     </a>
   `;
@@ -60,7 +60,7 @@ function createSocialLink(social) {
 	return `
     <li class="social-link">
       <a href="${social.url}" aria-label="${social.name}" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands ${social.icon}"></i>
+        <i class="${social.icon}"></i>
       </a>
     </li>
   `;
@@ -100,7 +100,7 @@ function createFooter(profile, socials) {
             <img src="./assets/images/icons/smile.svg" alt="Smile Icon" />
             About
           </a>
-          <a href="${profile.resumeLink}" target="_blank" rel="noopener noreferrer" class="footer-button">
+          <a href="${profile.resumeLink}" class="footer-button">
             <img src="./assets/images/icons/resume.svg" alt="Resume Icon" />
             Resume
           </a>

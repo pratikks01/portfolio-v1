@@ -229,6 +229,27 @@
 	],
 	"education": [
 		{
+			"id": "bits-pilani",
+			"institution": "Birla Institute of Technology And Science - Pilani",
+			"degree": "MTech in Cloud Computing",
+			"startDate": "July 2026",
+			"endDate": "July 2028",
+			"cgpa": "-",
+			"details": {
+				"achievements": [],
+				"coursework": [
+					"Cloud Computing",
+					"DevOps for Cloud",
+					"API-based Cloud Native Solutions",
+					"AI Workloads on the Cloud",
+					"Platform Engineering",
+					"Distributed Computing",
+					"Big Data Systems",
+					"Secure AIOps for Cloud Management"
+				]
+			}
+		},
+		{
 			"id": "engineering-college",
 			"institution": "Shri Ramdeobaba College of Engineering and Management, Nagpur",
 			"degree": "Bachelor's in Electronics Engineering",

@@ -38,6 +38,12 @@
   ],
   "education": [
     {
+      "institution": "BITS Pilani",
+      "location": "Pilani, India (Remote)",
+      "degree": "MTech in Cloud Computing",
+      "date": "2024 -- Present"
+    },
+    {
       "institution": "Shri Ramdeobaba College of Engineering and Management",
       "location": "Nagpur, India",
       "degree": "Bachelor of Engineering in Electronics Engineering (CGPA 8.76)",

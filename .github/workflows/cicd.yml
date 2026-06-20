@@ -45,7 +45,7 @@ jobs:
       - name: Check Broken Links (Lychee)
         uses: lycheeverse/lychee-action@v1.9.3
         with:
-          args: --verbose --no-progress './**/*.html'
+          args: --verbose --no-progress --exclude 'fonts.googleapis.com' --exclude 'fonts.gstatic.com' './**/*.html'
           fail: true
 
   docker-build-push:

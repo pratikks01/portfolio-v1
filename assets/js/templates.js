@@ -8,21 +8,21 @@
  * @returns {string} HTML string for project card
  */
 function createProjectCard(project) {
-	const links = project.links;
-	let linksHTML = "";
+  const links = project.links;
+  let linksHTML = "";
 
-	if (links.demo) {
-		linksHTML += `<a href="${links.demo}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>`;
-	}
-	if (links.github) {
-		linksHTML += `<a href="${links.github}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>`;
-	}
+  if (links.demo) {
+    linksHTML += `<a href="${links.demo}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>`;
+  }
+  if (links.github) {
+    linksHTML += `<a href="${links.github}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>`;
+  }
 
-	const skillsHTML = project.skills
-		.map((skill) => `<span>${skill}</span>`)
-		.join("");
+  const skillsHTML = project.skills
+    .map((skill) => `<span>${skill}</span>`)
+    .join("");
 
-	return `
+  return `
     <div class="card">
       <img
         src="${project.image}"
@@ -53,17 +53,17 @@ function createProjectCard(project) {
  * @returns {string} HTML string for experience card
  */
 function createExperienceCard(exp) {
-	const endDate =
-		exp.endMonth && exp.endYear ? `${exp.endMonth} ${exp.endYear}` : "Present";
-	const companyLink = exp.companyUrl
-		? `<a class="h3-color" href="${exp.companyUrl}" target="_blank" rel="noopener noreferrer">${exp.company} (${exp.locationType})</a>`
-		: `<span class="h3-color">${exp.company} (${exp.locationType})</span>`;
+  const endDate =
+    exp.endMonth && exp.endYear ? `${exp.endMonth} ${exp.endYear}` : "Present";
+  const companyLink = exp.companyUrl
+    ? `<a class="h3-color" href="${exp.companyUrl}" target="_blank" rel="noopener noreferrer">${exp.company} (${exp.locationType})</a>`
+    : `<span class="h3-color">${exp.company} (${exp.locationType})</span>`;
 
-	const detailsHTML = exp.details
-		.map((detail) => `<p class="experience-spacing">${detail}</p>`)
-		.join("");
+  const detailsHTML = exp.details
+    .map((detail) => `<p class="experience-spacing">${detail}</p>`)
+    .join("");
 
-	return `
+  return `
     <div class="exp-window">
       <div
         class="company-tile"
@@ -77,8 +77,8 @@ function createExperienceCard(exp) {
         <h4 class="green">${exp.position}</h4>
         <p class="date">
           Duration: ${exp.startMonth}/${
-		exp.startYear
-	} - ${endDate} (<span class="duration"></span>)
+            exp.startYear
+          } - ${endDate} (<span class="duration"></span>)
         </p>
         ${exp.location}<br />
         <div
@@ -100,39 +100,39 @@ function createExperienceCard(exp) {
  * @returns {string} HTML string for education card
  */
 function createEducationCard(edu) {
-	let detailsHTML = "";
+  let detailsHTML = "";
 
-	if (edu.details.achievements && edu.details.achievements.length > 0) {
-		const achievementsHTML = edu.details.achievements
-			.map((achievement) => `<p class="just-text">${achievement}</p>`)
-			.join("");
-		detailsHTML += `
+  if (edu.details.achievements && edu.details.achievements.length > 0) {
+    const achievementsHTML = edu.details.achievements
+      .map((achievement) => `<p class="just-text">${achievement}</p>`)
+      .join("");
+    detailsHTML += `
       <h5 class="edu-spacing">Achievements</h5>
       ${achievementsHTML}
     `;
-	}
+  }
 
-	if (edu.details.coursework && edu.details.coursework.length > 0) {
-		const courseHTML = edu.details.coursework
-			.map((course) => `<p>${course}</p>`)
-			.join("");
-		detailsHTML += `
+  if (edu.details.coursework && edu.details.coursework.length > 0) {
+    const courseHTML = edu.details.coursework
+      .map((course) => `<p>${course}</p>`)
+      .join("");
+    detailsHTML += `
       <h5 class="edu-spacing">Relevant Coursework</h5>
       ${courseHTML}
     `;
-	}
+  }
 
-	const detailsSection =
-		detailsHTML.trim() !== ""
-			? `
+  const detailsSection =
+    detailsHTML.trim() !== ""
+      ? `
       <div class="details closed card-description" id="${edu.id}-details">
         ${detailsHTML}
       </div>
       <span class="arrow"><i class="fas fa-chevron-down"></i></span>
     `
-			: "";
+      : "";
 
-	return `
+  return `
     <div class="exp-window">
       <div class="company-tile" data-target="${edu.id}">
         <p><span class="h3-color">${edu.institution}</span></p>
@@ -151,7 +151,7 @@ function createEducationCard(edu) {
  * @returns {string} HTML string for skill badge
  */
 function createSkillBadge(skill) {
-	return `
+  return `
     <div class="skill">
       <img src="${skill.icon}" alt="${skill.name} Icon" />
       <span>${skill.name}</span>

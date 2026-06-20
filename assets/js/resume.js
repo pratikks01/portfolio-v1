@@ -1,29 +1,29 @@
 function escapeHTML(str) {
-	if (!str) return "";
-	return str.replace(
-		/[&<>'"]/g,
-		(tag) =>
-			({
-				"&": "&amp;",
-				"<": "&lt;",
-				">": "&gt;",
-				"'": "&#39;",
-				'"': "&quot;",
-			}[tag] || tag)
-	);
+  if (!str) return "";
+  return str.replace(
+    /[&<>'"]/g,
+    (tag) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        '"': "&quot;",
+      })[tag] || tag,
+  );
 }
 
-// Keep <strong> tags intact for bolding by simply removing them from the escape function 
+// Keep <strong> tags intact for bolding by simply removing them from the escape function
 // since we trust our own data in this context. A safer way is to just inject as innerHTML for our own JSON.
 async function renderResume() {
-	try {
-		const response = await fetch("./data/resume.json");
-		const data = await response.json();
-		const container = document.getElementById("resume-content");
+  try {
+    const response = await fetch("./data/resume.json");
+    const data = await response.json();
+    const container = document.getElementById("resume-content");
 
-		if (!container) return;
+    if (!container) return;
 
-		let html = `
+    let html = `
 			<div class="resume-header">
 				<h1>${escapeHTML(data.personal.name)}</h1>
 				<div class="resume-contact">
@@ -42,11 +42,11 @@ async function renderResume() {
 			</div>
 		`;
 
-		// Experience Section
-		if (data.experience && data.experience.length > 0) {
-			html += `<div class="resume-section"><h2>Experience</h2>`;
-			data.experience.forEach((job) => {
-				html += `
+    // Experience Section
+    if (data.experience && data.experience.length > 0) {
+      html += `<div class="resume-section"><h2>Experience</h2>`;
+      data.experience.forEach((job) => {
+        html += `
 					<div class="resume-item">
 						<div class="resume-item-header">
 							<span class="resume-item-title">${escapeHTML(job.company)}</span>
@@ -61,15 +61,15 @@ async function renderResume() {
 						</ul>
 					</div>
 				`;
-			});
-			html += `</div>`;
-		}
+      });
+      html += `</div>`;
+    }
 
-		// Projects Section
-		if (data.projects && data.projects.length > 0) {
-			html += `<div class="resume-section"><h2>Projects</h2>`;
-			data.projects.forEach((proj) => {
-				html += `
+    // Projects Section
+    if (data.projects && data.projects.length > 0) {
+      html += `<div class="resume-section"><h2>Projects</h2>`;
+      data.projects.forEach((proj) => {
+        html += `
 					<div class="resume-item">
 						<div class="resume-item-header" style="justify-content: flex-start;">
 							<span class="resume-item-title">${escapeHTML(proj.name)}</span>
@@ -81,15 +81,15 @@ async function renderResume() {
 						</ul>
 					</div>
 				`;
-			});
-			html += `</div>`;
-		}
+      });
+      html += `</div>`;
+    }
 
-		// Education Section
-		if (data.education && data.education.length > 0) {
-			html += `<div class="resume-section"><h2>Education</h2>`;
-			data.education.forEach((edu) => {
-				html += `
+    // Education Section
+    if (data.education && data.education.length > 0) {
+      html += `<div class="resume-section"><h2>Education</h2>`;
+      data.education.forEach((edu) => {
+        html += `
 					<div class="resume-item">
 						<div class="resume-item-header">
 							<span class="resume-item-title">${escapeHTML(edu.institution)}</span>
@@ -101,26 +101,25 @@ async function renderResume() {
 						</div>
 					</div>
 				`;
-			});
-			html += `</div>`;
-		}
+      });
+      html += `</div>`;
+    }
 
-		// Skills Section
-		if (data.skills && data.skills.length > 0) {
-			html += `<div class="resume-section resume-skills"><h2>Technical Skills</h2>`;
-			data.skills.forEach((skill) => {
-				html += `<p><strong>${escapeHTML(skill.category)}:</strong> ${escapeHTML(skill.items)}</p>`;
-			});
-			html += `</div>`;
-		}
+    // Skills Section
+    if (data.skills && data.skills.length > 0) {
+      html += `<div class="resume-section resume-skills"><h2>Technical Skills</h2>`;
+      data.skills.forEach((skill) => {
+        html += `<p><strong>${escapeHTML(skill.category)}:</strong> ${escapeHTML(skill.items)}</p>`;
+      });
+      html += `</div>`;
+    }
 
-		container.innerHTML = html;
-
-	} catch (error) {
-		console.error("Error loading resume data:", error);
-		document.getElementById("resume-content").innerHTML = 
-			"<p>Error loading resume details. Please download the PDF via the button above.</p>";
-	}
+    container.innerHTML = html;
+  } catch (error) {
+    console.error("Error loading resume data:", error);
+    document.getElementById("resume-content").innerHTML =
+      "<p>Error loading resume details. Please download the PDF via the button above.</p>";
+  }
 }
 
 document.addEventListener("DOMContentLoaded", renderResume);

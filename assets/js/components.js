@@ -9,11 +9,11 @@
  * @returns {string} HTML string for header
  */
 function createHeader(profile, socials) {
-	return `
+  return `
     <header class="header">
       <a href="/" class="header-logo">@${profile.name
-				.toLowerCase()
-				.replace(/ /g, ".")}</a>
+        .toLowerCase()
+        .replace(/ /g, ".")}</a>
       <nav class="nav">
         <button class="toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <i class="fas fa-bars" aria-hidden="true"></i>
@@ -40,10 +40,12 @@ function createHeader(profile, socials) {
  * @returns {string} HTML string for a social media link.
  */
 function createSocialMediaListItem(social) {
-	return `
+  return `
     <a href="${social.url}" class="social-media-item" ${
-		social.url.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""
-	}>
+      social.url.startsWith("http")
+        ? 'target="_blank" rel="noopener noreferrer"'
+        : ""
+    }>
       <i class="${social.icon}"></i>
       ${social.label}
     </a>
@@ -57,7 +59,7 @@ function createSocialMediaListItem(social) {
  * @returns {string} HTML string for a social link list item.
  */
 function createSocialLink(social) {
-	return `
+  return `
     <li class="social-link">
       <a href="${social.url}" aria-label="${social.name}" target="_blank" rel="noopener noreferrer">
         <i class="${social.icon}"></i>
@@ -73,18 +75,18 @@ function createSocialLink(social) {
  * @returns {string} HTML string for footer
  */
 function createFooter(profile, socials) {
-	const socialLinksHTML = socials
-		.slice(0, 4)
-		.map((social) => createSocialLink(social))
-		.join("");
+  const socialLinksHTML = socials
+    .slice(0, 4)
+    .map((social) => createSocialLink(social))
+    .join("");
 
-	return `
+  return `
     <footer class="footer-container">
       <div class="footer">
         <div class="footer-column">
           <a href="/" class="footer-logo">@${profile.name
-						.toLowerCase()
-						.replace(/ /g, ".")}</a>
+            .toLowerCase()
+            .replace(/ /g, ".")}</a>
           <div class="socials">
             <ul>
               ${socialLinksHTML}
@@ -126,14 +128,14 @@ function createFooter(profile, socials) {
  * @param {Array} socials - Social media links
  */
 function injectHeader(profile, socials) {
-	if (!document.querySelector("header")) {
-		const tempDiv = document.createElement("div");
-		tempDiv.innerHTML = createHeader(profile, socials);
-		document.body.insertBefore(
-			tempDiv.firstElementChild,
-			document.body.firstChild,
-		);
-	}
+  if (!document.querySelector("header")) {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = createHeader(profile, socials);
+    document.body.insertBefore(
+      tempDiv.firstElementChild,
+      document.body.firstChild,
+    );
+  }
 }
 
 /**
@@ -142,8 +144,8 @@ function injectHeader(profile, socials) {
  * @param {Array} socials - Social media links
  */
 function injectFooter(profile, socials) {
-	const footer = createFooter(profile, socials);
-	const tempDiv = document.createElement("div");
-	tempDiv.innerHTML = footer;
-	document.body.appendChild(tempDiv.firstElementChild);
+  const footer = createFooter(profile, socials);
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = footer;
+  document.body.appendChild(tempDiv.firstElementChild);
 }

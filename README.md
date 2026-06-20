@@ -48,16 +48,17 @@ portfolio-v1/
 
 ## 📝 How to Update the Portfolio
 
-This portfolio is designed to be easily updatable. **You do not need to edit HTML files to update your information.** 
+This portfolio is designed to be easily updatable. **You do not need to edit HTML files to update your information.**
 
 All content is managed via the JSON files located in the `data/` directory.
 
 ### 1. Updating General Info, Projects, & Experience (`data/data.json`)
+
 Open `data/data.json` to modify the following:
 
 - **Profile Info (`profile`):** Update your title, bio, location, gap months (for experience calculation).
 - **Social Links (`socials`):** Add or remove social media links.
-- **Projects (`projects`):** 
+- **Projects (`projects`):**
   - To add a new project, append a new object to the `projects` array.
   - Set `"showOnHome": true` to feature the project on the landing page.
   - Make sure the `"image"` path points to a valid image in `assets/images/projects/`.
@@ -66,6 +67,7 @@ Open `data/data.json` to modify the following:
 - **Skills (`skills`):** Add new tech stack icons. Make sure to download the SVG/PNG and place it in `assets/images/icons/`.
 
 ### 2. Updating the Resume Page (`data/resume.json`)
+
 Open `data/resume.json` to modify the dedicated Resume page (`resume.html`):
 
 - **Personal Details:** Update your contact info and the link to your downloadable PDF (`pdfLink`).
@@ -84,15 +86,18 @@ To run this project locally and preview your updates:
 2. Since the site fetches data from local JSON files, you **must run a local server** to avoid CORS errors in your browser. You cannot just double-click `index.html`.
 
 **Using VS Code (Recommended):**
+
 - Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
 - Right-click `index.html` and select **"Open with Live Server"**.
 
 **Using Python:**
+
 - Open your terminal in the project directory.
 - Run: `python3 -m http.server 8000`
 - Visit `http://localhost:8000` in your browser.
 
 **Using Node.js (npx):**
+
 - Open your terminal and run: `npx serve .`
 
 ---
@@ -116,5 +121,5 @@ If you have any questions, comments, or concerns, feel free to contact me:
 
 [![Email](https://img.shields.io/badge/Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:pshastrakar4@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pratikshastrakar/)
-[![Twitter](https://img.shields.io/badge/X_(Twitter)-000000?style=flat&logo=x&logoColor=white)](https://x.com/pratikks01)
+[![Twitter](<https://img.shields.io/badge/X_(Twitter)-000000?style=flat&logo=x&logoColor=white>)](https://x.com/pratikks01)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/pratikks01/)

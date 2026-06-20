@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-v1",
+  "version": "1.0.0",
+  "description": "Pratik Shastrakar's Portfolio",
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "check-format": "prettier --check \"**/*.{html,css,js,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
